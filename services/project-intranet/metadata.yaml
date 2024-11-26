@@ -2,7 +2,8 @@ displayName: Intranet Client
 description: Install l'intranet du client
 category:
   - Apps
-type: platform
+type: catalog
+allowMultipleInstances: false
 scope:
   - workspace
 licensing:
