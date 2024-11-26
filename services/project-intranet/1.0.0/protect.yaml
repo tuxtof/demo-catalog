@@ -1,0 +1,49 @@
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: ReplicationTarget
+metadata:
+  name: repln-target-dkp
+  namespace: app1
+spec:
+  namespaceName: app1
+  remoteName: remote-dkp
+  serviceAccountName: default
+---
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: Application
+metadata:
+  name: app1
+  namespace: app1
+spec:
+  # include everything in the namespace.
+  applicationSelector:
+---
+apiVersion: scheduler.nutanix.com/v1alpha1
+kind: JobScheduler
+metadata:
+  name: hour-local-schedule
+  namespace: app1
+spec:
+  interval:
+    minutes: 60
+  timeZoneName: "Europe/Paris"
+---
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: ProtectionPlan
+metadata:
+  name: app1-dr-plan
+  namespace: app1
+spec:
+  scheduleName: hour-local-schedule
+  retentionPolicy:
+    retentionCount: 5
+  replicationConfigs:
+    - replicationTargetName: repln-target-dkp
+---
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: AppProtectionPlan
+metadata:
+  name: app1-app-dr-plan
+  namespace: app1
+spec:
+  applicationName: app1
+  protectionPlanNames: ["app1-dr-plan"]
