@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: intranet-dashboard
+  name: intranet-dashboard-info
   namespace: app1
   labels:
     "kommander.d2iq.io/application": "intranet"
