@@ -1,0 +1,35 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: myclaim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment-default-web
+  template:
+    metadata:
+      labels:
+        app: deployment-default-web
+    spec:
+      containers:
+        - image: nginx
+          name: web
+          volumeMounts:
+            - mountPath: /test
+              name: vol1
+      volumes:
+        - name: vol1
+          persistentVolumeClaim:
+            claimName: myclaim

@@ -1,0 +1,14 @@
+displayName: Intranet Client
+description: Intranet du client
+category:
+  - logging
+type: platform
+scope:
+  - project
+licensing:
+  - Ultimate
+  - Enterprise
+certifications:
+overview: |-
+  # Overview
+  Intranet client
