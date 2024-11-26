@@ -40,3 +40,16 @@ spec:
         - name: vol1
           persistentVolumeClaim:
             claimName: myclaim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: intranet
+  namespace: app1
+spec:
+  selector:
+    app: deployment-default-web
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
