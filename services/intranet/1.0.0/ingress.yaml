@@ -5,9 +5,10 @@ metadata:
   namespace: app1
 spec:
   rules:
-    - http:
+    - host: intranet.nkp-next.nxlab.fr
+      http:
         paths:
-          - path: /intranet
+          - path: /
             pathType: Prefix
             backend:
               service:

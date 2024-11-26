@@ -7,6 +7,6 @@ metadata:
     "kommander.d2iq.io/application": "intranet"
 data:
   name: "intranet"
-  dashboardLink: "/intranet"
+  dashboardLink: "https://intranet.nkp-next.nxlab.fr"
   docsLink: "nodocs"
   version: "1.0.0"
