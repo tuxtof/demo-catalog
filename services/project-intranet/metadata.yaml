@@ -1,10 +1,10 @@
 displayName: Intranet Client
 description: Intranet du client
 category:
-  - logging
+  - Apps
 type: platform
 scope:
-  - project
+  - workspace
 licensing:
   - Ultimate
   - Enterprise
