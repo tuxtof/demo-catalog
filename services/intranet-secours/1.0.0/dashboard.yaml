@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: intranet-secours-dashboard
+  name: intranet-secours-dashboard-info
   namespace: app1
   labels:
     "kommander.d2iq.io/application": "intranet-secours"
