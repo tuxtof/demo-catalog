@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: intranet
+  namespace: app1
+spec:
+  rules:
+    - host: intranet-secours.nkp-next.nxlab.fr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: intranet
+                port:
+                  number: 80

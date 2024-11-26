@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: intranet-secours-dashboard
+  namespace: app1
+  labels:
+    "kommander.d2iq.io/application": "intranet-secours"
+data:
+  name: "intranet"
+  dashboardLink: "https://intranet-secours.nkp-next.nxlab.fr"
+  docsLink: "nodocs"
+  version: "1.0.0"
