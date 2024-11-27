@@ -1,7 +1,7 @@
 displayName: Pacman
 description: Install Pacman
 category:
-  - Ganes
+  - Games
 type: catalog
 allowMultipleInstances: false
 scope:
