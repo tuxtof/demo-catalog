@@ -20,6 +20,8 @@ spec:
       - includeResources:
           - group: ""
             kind: PersistentVolumeClaim
+          - group: ""
+            kind: PersistentVolume
 ---
 apiVersion: scheduler.nutanix.com/v1alpha1
 kind: JobScheduler
