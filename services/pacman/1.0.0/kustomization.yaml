@@ -5,6 +5,7 @@ resources:
   - pacman-deployment.yaml
   - pacman-service.yaml
   - pacman-ingress.yaml
+  - pacman-dashboard.yaml
   - application.yaml
   - protectionplan.yaml
   - appprotectionplan.yaml
