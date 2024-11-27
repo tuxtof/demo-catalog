@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pacman-dashboard-info
+  namespace: app1
+  labels:
+    "kommander.d2iq.io/application": "pacman"
+data:
+  name: "pacman"
+  dashboardLink: "https://pacman.principal.nkp-next.nxlab.fr"
+  docsLink: "nodocs"
+  version: "1.0.0"
