@@ -37,3 +37,4 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-5"
   name: pacman
+  namespace: ${workspaceNamespace}

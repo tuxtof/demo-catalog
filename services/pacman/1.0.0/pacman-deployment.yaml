@@ -17,6 +17,7 @@ spec:
       labels:
         name: pacman
     spec:
+      serviceAccount: pacman
       containers:
         - image: quay.io/jpacker/nodejs-pacman-app:latest
           name: pacman
