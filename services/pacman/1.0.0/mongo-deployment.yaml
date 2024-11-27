@@ -17,6 +17,8 @@ spec:
       labels:
         name: mongo
     spec:
+      securityContext:
+        fsGroup: 1001
       containers:
         - image: bitnami/mongodb:5.0.24
           name: mongo
