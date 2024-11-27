@@ -5,3 +5,7 @@ metadata:
   namespace: ${workspaceNamespace}
 spec:
   applicationSelector:
+    resourceLabelSelectors:
+      - includeResources:
+          - group: ""
+            kind: PersistentVolumeClaim

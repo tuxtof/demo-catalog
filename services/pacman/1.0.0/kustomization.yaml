@@ -8,5 +8,5 @@ resources:
   - pacman-ingress.yaml
   - pacman-dashboard.yaml
   - application.yaml
-  - protectionplan.yaml
-  - appprotectionplan.yaml
+  # - protectionplan.yaml
+  # - appprotectionplan.yaml
