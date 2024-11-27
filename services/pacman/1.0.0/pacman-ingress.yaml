@@ -13,3 +13,5 @@ spec:
             backend:
               service:
                 name: pacman
+                port:
+                  number: 80
