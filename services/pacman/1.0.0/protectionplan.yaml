@@ -19,3 +19,13 @@ spec:
   namespaceName: pacman
   remoteName: remote-dkp
   serviceAccountName: default
+---
+apiVersion: scheduler.nutanix.com/v1alpha1
+kind: JobScheduler
+metadata:
+  name: hour-local-schedule
+  namespace: pacman
+spec:
+  interval:
+    minutes: 60
+  timeZoneName: "Europe/Paris"
