@@ -1,0 +1,11 @@
+resources:
+  - pacman-rbac.yaml
+  - mongo-pvc.yaml
+  - mongo-deployment.yaml
+  - mongo-service.yaml
+  - pacman-deployment.yaml
+  - pacman-service.yaml
+  - pacman-route.yaml
+  - application.yaml
+  - protectionplan.yaml
+  - appprotectionplan.yaml

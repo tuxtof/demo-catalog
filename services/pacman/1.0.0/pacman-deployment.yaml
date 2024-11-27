@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
+  labels:
+    name: pacman
+  name: pacman
+  namespace: ${workspaceNamespace}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: pacman
+  template:
+    metadata:
+      labels:
+        name: pacman
+    spec:
+      serviceAccount: pacman
+      containers:
+        - image: harbor.infrastructure.cloudnative.nvdlab.net/wolfgang/pacman:1.0.0
+          name: pacman
+          ports:
+            - containerPort: 8080
+              name: http-server
+          env:
+            - name: MY_NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
