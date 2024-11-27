@@ -1,8 +1,6 @@
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "-5"
   name: pacman
 rules:
   - apiGroups: [""]
@@ -18,14 +16,11 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "-5"
   name: pacman
-  namespace: pacman
 subjects:
   - kind: ServiceAccount
     name: pacman
-    namespace: pacman
+    namespace: ${workspaceNamespace}
 roleRef:
   kind: ClusterRole
   name: pacman
@@ -34,7 +29,5 @@ roleRef:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "-5"
   name: pacman
   namespace: ${workspaceNamespace}
