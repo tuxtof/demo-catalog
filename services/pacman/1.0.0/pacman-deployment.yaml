@@ -18,7 +18,7 @@ spec:
         name: pacman
     spec:
       containers:
-        - image: quay.io/jpacker/nodejs-pacman-app:latest
+        - image: harbor.infrastructure.cloudnative.nvdlab.net/wolfgang/pacman:1.0.0
           name: pacman
           ports:
             - containerPort: 8080
