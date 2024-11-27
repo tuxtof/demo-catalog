@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pacman
+  namespace: ${workspaceNamespace}
+spec:
+  rules:
+    - host: intranet.nkp-next.nxlab.fr
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: pacman
