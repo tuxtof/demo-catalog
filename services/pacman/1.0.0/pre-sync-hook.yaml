@@ -3,9 +3,6 @@ kind: Job
 metadata:
   name: initialrestore
   namespace: pacman
-  annotations:
-    argocd.argoproj.io/sync-wave: "-2"
-    #argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
