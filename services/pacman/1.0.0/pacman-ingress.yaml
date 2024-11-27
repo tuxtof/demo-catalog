@@ -5,7 +5,7 @@ metadata:
   namespace: ${workspaceNamespace}
 spec:
   rules:
-    - host: intranet.nkp-next.nxlab.fr
+    - host: pacman.principal.nkp-next.nxlab.fr
       http:
         paths:
           - path: /
