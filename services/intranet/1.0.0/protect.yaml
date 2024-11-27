@@ -16,12 +16,10 @@ metadata:
 spec:
   # include everything in the namespace.
   applicationSelector:
-    resourceLabelSelectors:
-      - includeResources:
-          - group: ""
-            kind: PersistentVolumeClaim
-          # - group: ""
-          #   kind: PersistentVolume
+    # resourceLabelSelectors:
+    #   - includeResources:
+    #       - group: ""
+    #         kind: PersistentVolumeClaim
 ---
 apiVersion: scheduler.nutanix.com/v1alpha1
 kind: JobScheduler

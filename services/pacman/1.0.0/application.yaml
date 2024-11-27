@@ -12,3 +12,5 @@ spec:
         labelSelector:
           matchLabels:
             kustomize.toolkit.fluxcd.io/name: ${releaseName}
+---
+

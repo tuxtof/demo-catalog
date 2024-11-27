@@ -9,3 +9,13 @@ spec:
     retentionCount: 5
   replicationConfigs:
     - replicationTargetName: repln-target-dkp
+---
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: ReplicationTarget
+metadata:
+  name: repln-target-dkp
+  namespace: pacman
+spec:
+  namespaceName: pacman
+  remoteName: remote-dkp
+  serviceAccountName: default
