@@ -2,7 +2,7 @@ apiVersion: dataservices.nutanix.com/v1alpha1
 kind: Application
 metadata:
   name: pacman-app
-  namespace: ${workspaceNamespace}
+  namespace: pacman
 spec:
   applicationSelector:
     resourceLabelSelectors:

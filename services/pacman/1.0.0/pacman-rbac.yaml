@@ -20,7 +20,7 @@ metadata:
 subjects:
   - kind: ServiceAccount
     name: pacman
-    namespace: ${workspaceNamespace}
+    namespace: pacman
 roleRef:
   kind: ClusterRole
   name: pacman
@@ -30,4 +30,4 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: pacman
-  namespace: ${workspaceNamespace}
+  namespace: pacman

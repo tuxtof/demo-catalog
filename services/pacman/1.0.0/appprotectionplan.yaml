@@ -2,7 +2,7 @@ apiVersion: dataservices.nutanix.com/v1alpha1
 kind: AppProtectionPlan
 metadata:
   name: pacmanprotect-policy
-  namespace: ${workspaceNamespace}
+  namespace: pacman
 spec:
   applicationName: pacman-app
   protectionPlanNames:

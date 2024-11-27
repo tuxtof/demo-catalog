@@ -5,9 +5,9 @@ metadata:
     argocd.argoproj.io/sync-wave: "4"
   labels:
     name: mongo
-    namespace: ${workspaceNamespace}
+    namespace: pacman
   name: mongo
-  namespace: ${workspaceNamespace}
+  namespace: pacman
 spec:
   type: ClusterIP
   ports:
