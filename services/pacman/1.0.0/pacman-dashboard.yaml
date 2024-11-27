@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: pacman-dashboard-info
-  namespace: app1
+  namespace: ${workspaceNamespace}
   labels:
     "kommander.d2iq.io/application": "pacman"
 data:
