@@ -9,3 +9,6 @@ spec:
       - includeResources:
           - group: ""
             kind: PersistentVolumeClaim
+        labelSelector:
+          matchLabels:
+            kustomize.toolkit.fluxcd.io/name: ${releaseName}
