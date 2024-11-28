@@ -1,0 +1,7 @@
+apiVersion: dataservices.nutanix.com/v1alpha1
+kind: ApplicationSnapshotRestore
+metadata:
+  name: restore-pacman
+  namespace: pacman
+spec:
+  applicationSnapshotName: ${releaseName}
