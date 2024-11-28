@@ -51,3 +51,16 @@ metadata:
 spec:
   applicationName: app1
   protectionPlanNames: ["app1-dr-plan"]
+---
+## for the remote
+# apiVersion: dataservices.nutanix.com/v1alpha1
+# kind: ProtectionPlan
+# metadata:
+#   name: app1-dr-plan-remote
+#   namespace: app1
+# spec:
+#   retentionPolicy:
+#     retentionCount: 5
+#     labelSelector:
+#       matchLabels:
+#         dataservices.nutanix.com/protection-plan: app1-dr-plan
