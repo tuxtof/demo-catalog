@@ -17,7 +17,7 @@ spec:
     spec:
       serviceAccount: pacman
       containers:
-        - image: harbor.infrastructure.cloudnative.nvdlab.net/wolfgang/pacman:1.0.0
+        - image: tuxtof/pacman:1.0.0
           name: pacman
           ports:
             - containerPort: 8080
