@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cnaos-dashboard-info
+  namespace: kommander
+  labels:
+    "kommander.d2iq.io/application": "cnaos"
+data:
+  name: "Nutanix Cloud Native AOS"
+  dashboardLink: "https://cnaos"
+  docsLink: "nodocs"
+  version: "1.0.0"
